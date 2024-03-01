@@ -1,0 +1,182 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Proyecto BD Aaron Ortiz",
+    "dateExported": "2024-02-28T20:44:28.567Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dbe30098-f0df-487b-bcb7-d40401d6bc9a",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Crear usuario",
+            "url": "http://localhost:3000/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-28T18:12:35.023Z",
+            "modified": "2024-02-28T18:12:35.023Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Aaron\",\n  \"email\": \"ortiz_aron@test.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "96aa4b83-7cde-4c12-9a94-bb9c4e5cddda",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Consular usuarios",
+            "url": "http://localhost:3000/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-28T18:13:02.335Z",
+            "modified": "2024-02-28T18:13:02.335Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0de1f0bc-ad08-4a86-9e66-5f874ff05922",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Consultar tableros",
+            "url": "http://localhost:3000/boards",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-28T18:14:11.240Z",
+            "modified": "2024-02-28T18:14:11.240Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c5682409-c735-4872-ad4d-1f27e86ab085",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Crear tablero",
+            "url": "http://localhost:3000/boards",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-02-28T18:55:53.538Z",
+            "modified": "2024-02-28T18:55:53.538Z",
+            "headers": [
+                {
+                    "name": "user-id",
+                    "value": "0c751f42-2e29-4c4b-a930-164d9210e0bb"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Tablero prueba 2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "993c608a-ee4e-4f65-953f-30649d02ff1c",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Crear lista para tablero",
+            "url": "http://localhost:3000/createListForBoard",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-02-28T20:04:29.534Z",
+            "modified": "2024-02-28T20:04:29.534Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Lista prueba\",\n  \"board_id\": \"a90179bc-b27b-40c3-b92b-f8b2ebb5ab96\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cfcbfaec-c33f-4ea9-9540-45b2f14a36d9",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Recuperar Lista(s) por Tablero",
+            "url": "http://localhost:3000/getListByBoard?id=a90179bc-b27b-40c3-b92b-f8b2ebb5ab96",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-28T20:27:43.854Z",
+            "modified": "2024-02-28T20:27:43.854Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "a90179bc-b27b-40c3-b92b-f8b2ebb5ab96",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "90074eec-a75a-4e65-a812-ff90261f8b24",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Crear tarjeta para lista",
+            "url": "http://localhost:3000/createCardForList",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-02-28T20:34:21.061Z",
+            "modified": "2024-02-28T20:34:21.061Z",
+            "headers": [
+                {
+                    "name": "user-id",
+                    "value": "0c751f42-2e29-4c4b-a930-164d9210e0bb"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Tarjeta para lista\",\n  \"description\": \"Tarjeta para lista (de prueba)\",\n  \"due_date\": \"2024-02-28\",\n  \"list_id\": \"9b5d2502-973e-4675-b729-6e75d1242b7a\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6e5fd798-7d82-41b2-88e2-10428186f5e1",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Recuperar tarjetas por lista",
+            "url": "http://localhost:3000/getCardsByList?id=9b5d2502-973e-4675-b729-6e75d1242b7a",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-28T20:36:00.881Z",
+            "modified": "2024-02-28T20:36:00.881Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "9b5d2502-973e-4675-b729-6e75d1242b7a",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "8b0ee575-1aed-4cb8-8a18-a42ae2833379",
+            "colId": "d57ef2c5-35be-415f-b319-2aee623123fe",
+            "containerId": "",
+            "name": "Asignar usuario a una tarjeta",
+            "url": "http://localhost:3000/assignUserToCard",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-02-28T20:44:19.611Z",
+            "modified": "2024-02-28T20:44:19.611Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"card_id\": \"cac9d70c-3973-421e-9190-31c809159d1d\",\n  \"user_id\": \"0c751f42-2e29-4c4b-a930-164d9210e0bb\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
